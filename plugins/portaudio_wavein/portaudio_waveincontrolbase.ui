@@ -1,0 +1,92 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>PaWaveInControlBase</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>PaWaveInControlBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>387</width>
+            <height>676</height>
+        </rect>
+    </property>
+    <property name="paletteBackgroundColor">
+        <color>
+            <red>234</red>
+            <green>230</green>
+            <blue>222</blue>
+        </color>
+    </property>
+    <property name="caption">
+        <string>Form1</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>0</number>
+        </property>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>GroupBoxCardSelection</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="paletteBackgroundColor">
+                <color>
+                    <red>234</red>
+                    <green>230</green>
+                    <blue>222</blue>
+                </color>
+            </property>
+            <property name="title">
+                <string>Soundkarte</string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QComboBox">
+                    <property name="name">
+                        <cstring>ComboBoxCardSelection</cstring>
+                    </property>
+                </widget>
+            </vbox>
+        </widget>
+        <spacer>
+            <property name="name">
+                <cstring>spacer1</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+    </vbox>
+</widget>
+<connections>
+    <connection>
+        <sender>ComboBoxCardSelection</sender>
+        <signal>activated(int)</signal>
+        <receiver>PaWaveInControlBase</receiver>
+        <slot>inputDeviceChanged(int)</slot>
+    </connection>
+</connections>
+<slots>
+    <slot access="protected" specifier="pure virtual">inputDeviceChanged( int )</slot>
+</slots>
+<pixmapinproject/>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

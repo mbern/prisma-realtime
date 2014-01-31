@@ -1,0 +1,748 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>ViewControlBase</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>ViewControlBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>198</width>
+            <height>555</height>
+        </rect>
+    </property>
+    <property name="paletteBackgroundColor">
+        <color>
+            <red>234</red>
+            <green>230</green>
+            <blue>221</blue>
+        </color>
+    </property>
+    <property name="caption">
+        <string>Form2</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>0</number>
+        </property>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>GroupBoxDiagram</cstring>
+            </property>
+            <property name="title">
+                <string>Diagrammtyp</string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QComboBox">
+                    <property name="name">
+                        <cstring>ComboBoxViewSelection</cstring>
+                    </property>
+                </widget>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>CheckBoxBypass</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Skalierung vom Diagramm 1</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>CheckBoxHide</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Blende dieses Diagramm aus</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>CheckBoxBezugston</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Zeige Bezugston</string>
+                    </property>
+                </widget>
+            </vbox>
+        </widget>
+        <widget class="QButtonGroup">
+            <property name="name">
+                <cstring>ButtonGroupFrequenz</cstring>
+            </property>
+            <property name="frameShape">
+                <enum>GroupBoxPanel</enum>
+            </property>
+            <property name="title">
+                <string>Frequenzachse</string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>RadioFreqencyRange</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Frequenzbereich</string>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <widget class="QFrame">
+                    <property name="name">
+                        <cstring>frame5</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>true</bool>
+                    </property>
+                    <property name="frameShape">
+                        <enum>NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                        <enum>Raised</enum>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>0</number>
+                        </property>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout1</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>textLabel3</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>0</hsizetype>
+                                            <vsizetype>5</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string>Start:</string>
+                                    </property>
+                                </widget>
+                                <widget class="QSpinBox">
+                                    <property name="name">
+                                        <cstring>SpinBoxStartFreq</cstring>
+                                    </property>
+                                    <property name="maxValue">
+                                        <number>19999</number>
+                                    </property>
+                                    <property name="lineStep">
+                                        <number>10</number>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>textLabel5</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>7</hsizetype>
+                                            <vsizetype>5</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string>Hz</string>
+                                    </property>
+                                </widget>
+                            </hbox>
+                        </widget>
+                        <widget class="QSlider">
+                            <property name="name">
+                                <cstring>SliderStartFreq</cstring>
+                            </property>
+                            <property name="maxValue">
+                                <number>19999</number>
+                            </property>
+                            <property name="lineStep">
+                                <number>10</number>
+                            </property>
+                            <property name="pageStep">
+                                <number>100</number>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                        </widget>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout2</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>textLabel4</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>0</hsizetype>
+                                            <vsizetype>5</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string>Stop:</string>
+                                    </property>
+                                </widget>
+                                <widget class="QSpinBox">
+                                    <property name="name">
+                                        <cstring>SpinBoxStopFreq</cstring>
+                                    </property>
+                                    <property name="maxValue">
+                                        <number>20000</number>
+                                    </property>
+                                    <property name="minValue">
+                                        <number>1</number>
+                                    </property>
+                                    <property name="lineStep">
+                                        <number>10</number>
+                                    </property>
+                                    <property name="value">
+                                        <number>20000</number>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>textLabel5_2</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>7</hsizetype>
+                                            <vsizetype>5</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string>Hz</string>
+                                    </property>
+                                </widget>
+                            </hbox>
+                        </widget>
+                        <widget class="QSlider">
+                            <property name="name">
+                                <cstring>SliderStopFreq</cstring>
+                            </property>
+                            <property name="minValue">
+                                <number>1</number>
+                            </property>
+                            <property name="maxValue">
+                                <number>20000</number>
+                            </property>
+                            <property name="lineStep">
+                                <number>10</number>
+                            </property>
+                            <property name="pageStep">
+                                <number>100</number>
+                            </property>
+                            <property name="value">
+                                <number>20000</number>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                        </widget>
+                    </vbox>
+                </widget>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>RadioPartials</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Teilschwingung</string>
+                    </property>
+                </widget>
+                <widget class="QFrame">
+                    <property name="name">
+                        <cstring>frame6</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="frameShape">
+                        <enum>NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                        <enum>Plain</enum>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>0</number>
+                        </property>
+                        <widget class="QFrame">
+                            <property name="name">
+                                <cstring>frame4</cstring>
+                            </property>
+                            <property name="frameShape">
+                                <enum>NoFrame</enum>
+                            </property>
+                            <property name="frameShadow">
+                                <enum>Plain</enum>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <property name="margin">
+                                    <number>0</number>
+                                </property>
+                            </hbox>
+                        </widget>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout4</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>textLabel7</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>0</hsizetype>
+                                            <vsizetype>5</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string>ΔC:</string>
+                                    </property>
+                                </widget>
+                                <widget class="QSpinBox">
+                                    <property name="name">
+                                        <cstring>SpinBoxDeltaC</cstring>
+                                    </property>
+                                    <property name="maxValue">
+                                        <number>100</number>
+                                    </property>
+                                    <property name="minValue">
+                                        <number>1</number>
+                                    </property>
+                                    <property name="value">
+                                        <number>50</number>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>textLabel8</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>7</hsizetype>
+                                            <vsizetype>5</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string>Cent</string>
+                                    </property>
+                                </widget>
+                            </hbox>
+                        </widget>
+                        <widget class="QSlider">
+                            <property name="name">
+                                <cstring>SliderDeltaC</cstring>
+                            </property>
+                            <property name="minValue">
+                                <number>1</number>
+                            </property>
+                            <property name="maxValue">
+                                <number>100</number>
+                            </property>
+                            <property name="value">
+                                <number>50</number>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                        </widget>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout5</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>textLabel9</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>0</hsizetype>
+                                            <vsizetype>5</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string>Teilschwingung Nr.:</string>
+                                    </property>
+                                </widget>
+                                <widget class="QSpinBox">
+                                    <property name="name">
+                                        <cstring>SpinBoxPartial</cstring>
+                                    </property>
+                                    <property name="maxValue">
+                                        <number>30</number>
+                                    </property>
+                                    <property name="minValue">
+                                        <number>1</number>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer4</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>10</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </hbox>
+                        </widget>
+                        <widget class="QSlider">
+                            <property name="name">
+                                <cstring>SliderPartial</cstring>
+                            </property>
+                            <property name="minValue">
+                                <number>1</number>
+                            </property>
+                            <property name="maxValue">
+                                <number>30</number>
+                            </property>
+                            <property name="pageStep">
+                                <number>5</number>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                        </widget>
+                        <widget class="QCheckBox">
+                            <property name="name">
+                                <cstring>CheckBoxAllPartial</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Zeige von Teilschwingung 1 an</string>
+                            </property>
+                        </widget>
+                    </vbox>
+                </widget>
+            </vbox>
+        </widget>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>groupBox1</cstring>
+            </property>
+            <property name="enabled">
+                <bool>true</bool>
+            </property>
+            <property name="title">
+                <string>Amplitudenachse</string>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QSpinBox" row="0" column="1">
+                    <property name="name">
+                        <cstring>SpinBoxMaxA</cstring>
+                    </property>
+                    <property name="maxValue">
+                        <number>10</number>
+                    </property>
+                    <property name="minValue">
+                        <number>-90</number>
+                    </property>
+                    <property name="lineStep">
+                        <number>10</number>
+                    </property>
+                    <property name="value">
+                        <number>0</number>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="0" column="2">
+                    <property name="name">
+                        <cstring>textLabel12</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>7</hsizetype>
+                            <vsizetype>5</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>dB</string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="0" column="0">
+                    <property name="name">
+                        <cstring>textLabel11</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Max:</string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="1" column="0">
+                    <property name="name">
+                        <cstring>textLabel11_2</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Min:</string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="1" column="2">
+                    <property name="name">
+                        <cstring>textLabel12_2</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>7</hsizetype>
+                            <vsizetype>5</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>dB</string>
+                    </property>
+                </widget>
+                <widget class="QSpinBox" row="1" column="1">
+                    <property name="name">
+                        <cstring>SpinBoxMinA</cstring>
+                    </property>
+                    <property name="maxValue">
+                        <number>0</number>
+                    </property>
+                    <property name="minValue">
+                        <number>-100</number>
+                    </property>
+                    <property name="lineStep">
+                        <number>10</number>
+                    </property>
+                    <property name="value">
+                        <number>-70</number>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <spacer>
+            <property name="name">
+                <cstring>spacer3</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+    </vbox>
+</widget>
+<connections>
+    <connection>
+        <sender>ButtonGroupFrequenz</sender>
+        <signal>clicked(int)</signal>
+        <receiver>ViewControlBase</receiver>
+        <slot>calculateF()</slot>
+    </connection>
+    <connection>
+        <sender>CheckBoxAllPartial</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>ViewControlBase</receiver>
+        <slot>calculateF()</slot>
+    </connection>
+    <connection>
+        <sender>CheckBoxBypass</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>ButtonGroupFrequenz</receiver>
+        <slot>setDisabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>CheckBoxBypass</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>ViewControlBase</receiver>
+        <slot>calculate()</slot>
+    </connection>
+    <connection>
+        <sender>CheckBoxBypass</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>groupBox1</receiver>
+        <slot>setDisabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>CheckBoxHide</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>ViewControlBase</receiver>
+        <slot>hideGraph(bool)</slot>
+    </connection>
+    <connection>
+        <sender>ComboBoxViewSelection</sender>
+        <signal>activated(int)</signal>
+        <receiver>ViewControlBase</receiver>
+        <slot>changeType()</slot>
+    </connection>
+    <connection>
+        <sender>RadioFreqencyRange</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>frame5</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>RadioPartials</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>frame6</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>SliderDeltaC</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SpinBoxDeltaC</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SliderPartial</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SpinBoxPartial</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SliderStartFreq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SpinBoxStartFreq</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SliderStopFreq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SpinBoxStopFreq</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SpinBoxDeltaC</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>ViewControlBase</receiver>
+        <slot>calculateF()</slot>
+    </connection>
+    <connection>
+        <sender>SpinBoxDeltaC</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SliderDeltaC</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SpinBoxMaxA</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>ViewControlBase</receiver>
+        <slot>calculateA()</slot>
+    </connection>
+    <connection>
+        <sender>SpinBoxMinA</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>ViewControlBase</receiver>
+        <slot>calculateA()</slot>
+    </connection>
+    <connection>
+        <sender>SpinBoxPartial</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>ViewControlBase</receiver>
+        <slot>calculateF()</slot>
+    </connection>
+    <connection>
+        <sender>SpinBoxPartial</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SliderPartial</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SpinBoxStartFreq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>ViewControlBase</receiver>
+        <slot>calculateF()</slot>
+    </connection>
+    <connection>
+        <sender>SpinBoxStartFreq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SliderStartFreq</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SpinBoxStopFreq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SliderStopFreq</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SpinBoxStopFreq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>ViewControlBase</receiver>
+        <slot>calculateF()</slot>
+    </connection>
+    <connection>
+        <sender>CheckBoxBezugston</sender>
+        <signal>clicked()</signal>
+        <receiver>ViewControlBase</receiver>
+        <slot>showToneMarkerClicked()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot access="protected" specifier="pure virtual">calculateA()</slot>
+    <slot access="protected" specifier="pure virtual">calculateF()</slot>
+    <slot access="protected" specifier="pure virtual">changeType()</slot>
+    <slot specifier="pure virtual">calculate()</slot>
+    <slot access="protected" specifier="pure virtual">hideGraph( bool )</slot>
+    <slot access="protected" specifier="pure virtual">showToneMarkerClicked()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

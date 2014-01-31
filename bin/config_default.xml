@@ -1,0 +1,179 @@
+<prismaconfig version="2" description="Standardkonfiguration">
+    <global>
+        <value id="display_length" type="double">3.4</value>
+        <value id="fs" type="Q_UINT32">44100</value>
+        <value id="frame_size" type="Q_UINT32">1025</value>
+        <value id="hop_size" type="Q_UINT32">768</value>
+    </global>
+    <application>
+        <value id="position" type="QPoint">66,52</value>
+        <value id="size" type="QSize">900,760</value>
+        <value id="maximized" type="bool">FALSE</value>
+        <value id="tbindex" type="Q_INT8">0</value>
+    </application>
+    <plugins>
+        <plugin id="visualize">
+            <object id="m_Graph" class="GlGraphContainer">
+            </object>
+            <object id="m_SpectrumData" class="SpectrumData">
+                <value id="t_length" type="PROXY" refid="display_length"/>
+                <value id="fs" type="PROXY" refid="fs"/>
+                <value id="hop_size" type="PROXY" refid="hop_size"/>
+                <value id="maxpointsperframe" type="Q_UINT32">200</value>
+            </object>
+            <object id="m_FeatureData" class="FeatureData">
+                <value id="t_length" type="PROXY" refid="display_length"/>
+                <value id="fs" type="PROXY" refid="fs"/>
+                <value id="hop_size" type="PROXY" refid="hop_size"/>
+            </object>
+            <object id="m_View1" class="ViewControl">
+                <value id="type" type="Q_UINT8">0</value>
+                <value id="hide" type="bool">FALSE</value>
+                <value id="fselection" type="Q_INT8">0</value>
+                <value id="fmin" type="Q_UINT16">0</value>
+                <value id="fmax" type="Q_UINT16">20000</value>
+                <value id="cent" type="Q_UINT8">50</value>
+                <value id="harmonic" type="Q_UINT8">1</value>
+                <value id="showfrom1" type="bool">FALSE</value>
+                <value id="amin" type="Q_INT8">-70</value>
+                <value id="amax" type="Q_INT8">0</value>
+                <value id="t_length" type="PROXY" refid="display_length"/>
+                <value id="reffreq" type="bool">TRUE</value>
+            </object>
+            <object id="m_View2" class="ViewControl">
+                <value id="type" type="Q_UINT8">1</value>
+                <value id="sync" type="bool">FALSE</value>
+                <value id="hide" type="bool">FALSE</value>
+                <value id="fselection" type="Q_INT8">0</value>
+                <value id="fmin" type="Q_UINT16">0</value>
+                <value id="fmax" type="Q_UINT16">20000</value>
+                <value id="cent" type="Q_UINT8">50</value>
+                <value id="harmonic" type="Q_UINT8">1</value>
+                <value id="showfrom1" type="bool">FALSE</value>
+                <value id="amin" type="Q_INT8">-70</value>
+                <value id="amax" type="Q_INT8">0</value>
+                <value id="t_length" type="PROXY" refid="display_length"/>
+                <value id="reffreq" type="bool">FALSE</value>
+            </object>
+            <object id="m_View3" class="ViewControl">
+                <value id="type" type="Q_UINT8">0</value>
+                <value id="hide" type="bool">FALSE</value>
+                <value id="fselection" type="Q_INT8">0</value>
+                <value id="fmin" type="Q_UINT16">0</value>
+                <value id="fmax" type="Q_UINT16">20000</value>
+                <value id="cent" type="Q_UINT8">50</value>
+                <value id="harmonic" type="Q_UINT8">1</value>
+                <value id="showfrom1" type="bool">FALSE</value>
+                <value id="amin" type="Q_INT8">-70</value>
+                <value id="amax" type="Q_INT8">0</value>
+                <value id="t_length" type="PROXY" refid="display_length"/>
+                <value id="reffreq" type="bool">FALSE</value>
+            </object>
+            <object id="m_View4" class="ViewControl">
+                <value id="hide" type="bool">FALSE</value>
+                <value id="type" type="Q_UINT8">0</value>
+                <value id="t_length" type="PROXY" refid="display_length"/>
+                <value id="curve_am" type="bool">TRUE</value>
+                <value id="curve_ar" type="bool">TRUE</value>
+                <value id="curve_partial_1" type="bool">TRUE</value>
+                <value id="curve_partial_2" type="bool">TRUE</value>
+                <value id="curve_partial_3" type="bool">TRUE</value>
+                <value id="f0_axis_type" type="Q_UINT8">0</value>
+                <value id="f0_fmin" type="Q_UINT16">0</value>
+                <value id="f0_fmax" type="Q_UINT16">20000</value>
+                <value id="f0_cent" type="Q_UINT16">100</value>
+                <value id="f0_reffreq" type="bool">TRUE</value>
+                <value id="ampl_amin" type="Q_INT8">-80</value>
+                <value id="ampl_amax" type="Q_INT8">0</value>
+                <value id="partial_amin" type="Q_INT8">-80</value>
+                <value id="partial_amax" type="Q_INT8">0</value>
+                <value id="spc_fmin" type="Q_UINT16">0</value>
+                <value id="spc_fmax" type="Q_UINT16">20000</value>
+                <value id="hsl_min" type="Q_INT8">-3</value>
+                <value id="hsl_max" type="Q_INT8">3</value>
+                <value id="h2a_min" type="Q_INT8">-40</value>
+                <value id="h2a_max" type="Q_INT8">0</value>
+                <value id="int_min" type="Q_INT8">-50</value>
+                <value id="int_max" type="Q_INT8">50</value>
+            </object>
+            <object id="m_View5" class="ViewControl">
+                <value id="hide" type="bool">FALSE</value>
+                <value id="type" type="Q_UINT8">1</value>
+                <value id="t_length" type="PROXY" refid="display_length"/>
+                <value id="curve_am" type="bool">TRUE</value>
+                <value id="curve_ar" type="bool">TRUE</value>
+                <value id="curve_partial_1" type="bool">TRUE</value>
+                <value id="curve_partial_2" type="bool">TRUE</value>
+                <value id="curve_partial_3" type="bool">TRUE</value>
+                <value id="f0_axis_type" type="Q_UINT8">0</value>
+                <value id="f0_fmin" type="Q_UINT16">0</value>
+                <value id="f0_fmax" type="Q_UINT16">20000</value>
+                <value id="f0_cent" type="Q_UINT16">100</value>
+                <value id="f0_reffreq" type="bool">TRUE</value>
+                <value id="ampl_amin" type="Q_INT8">-80</value>
+                <value id="ampl_amax" type="Q_INT8">0</value>
+                <value id="partial_amin" type="Q_INT8">-80</value>
+                <value id="partial_amax" type="Q_INT8">0</value>
+                <value id="spc_fmin" type="Q_UINT16">0</value>
+                <value id="spc_fmax" type="Q_UINT16">20000</value>
+                <value id="hsl_min" type="Q_INT8">-3</value>
+                <value id="hsl_max" type="Q_INT8">3</value>
+                <value id="h2a_min" type="Q_INT8">-40</value>
+                <value id="h2a_max" type="Q_INT8">0</value>
+                <value id="int_min" type="Q_INT8">-50</value>
+                <value id="int_max" type="Q_INT8">50</value>
+            </object>
+            <object id="m_Config" class="GraphConfig">
+                <value id="deltaC" type="Q_UINT8">50</value>
+                <value id="pointSize" type="Q_UINT8">5</value>
+                <value id="backgroundGray" type="Q_UINT8">100</value>
+                <value id="fs" type="PROXY" refid="fs"/>
+                <value id="frame_size" type="PROXY" refid="frame_size"/>
+                <value id="hop_size" type="PROXY" refid="hop_size"/>
+            </object>
+            <object id="m_BfControl" class="BaseFreqControl">
+                <value id="tuning" type="Q_UINT16">440</value>
+                <value id="mode" type="Q_INT8">1</value>
+                <value id="note" type="Q_UINT8">0</value>
+                <value id="octave" type="Q_INT32">1</value>
+                <value id="refFreq" type="double">440</value>
+            </object>
+            <object id="m_TopDisplay" class="TopDisplay">
+                <value id="pause" type="bool">TRUE</value>
+            </object>
+        </plugin>
+        <plugin id="wavein">
+            <object id="m_WaveInControl" class="WaveInControl">
+                <value id="device" type="QString"/>
+                <value id="channel" type="Q_UINT8">3</value>
+            </object>
+            <object id="m_PaWaveInControl" class="PaWaveInControl">
+                <value id="device" type="QString">HDA Intel MID: CONEXANT Analog (hw:0,0)</value>
+            </object>
+        </plugin>
+        <plugin id="filewriter">
+            <object id="m_FileWriteControl" class="FileWriterControl">
+                <value id="buffer_max_length" type="Q_UINT32">100</value>
+                <value id="buffer_length" type="Q_UINT32">3</value>
+                <value id="save_bin" type="bool">TRUE</value>
+                <value id="save_wave" type="bool">TRUE</value>
+                <value id="save_path" type="QString">/home/mbe</value>
+                <value id="file_name" type="QString"/>
+            </object>
+        </plugin>
+        <plugin id="analyse">
+            <object id="Analyse_os" class="Analyse_os">
+                <value id="fs" type="PROXY" refid="fs"/>
+                <value id="frame_size" type="PROXY" refid="frame_size"/>
+                <value id="hop_size" type="PROXY" refid="hop_size"/>
+            </object>
+            <object id="m_pFundFreq" class="FundFreq">
+                <value id="c_range" type="Q_INT32">7</value>
+                <value id="c_d" type="double">0.0002</value>
+                <value id="c_histlen" type="Q_INT32">9</value>
+                <value id="c_considerlen" type="Q_INT32">5</value>
+                <value id="c_nstrongest" type="Q_INT32">3</value>
+            </object>
+        </plugin>
+    </plugins>
+</prismaconfig>

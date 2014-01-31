@@ -1,0 +1,1609 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>FeatureControlBase</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>FeatureControlBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>302</width>
+            <height>615</height>
+        </rect>
+    </property>
+    <property name="paletteBackgroundColor">
+        <color>
+            <red>234</red>
+            <green>230</green>
+            <blue>222</blue>
+        </color>
+    </property>
+    <property name="caption">
+        <string>Form1</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>0</number>
+        </property>
+        <widget class="QGroupBox">
+            <property name="name">
+                <cstring>groupBox4_2</cstring>
+            </property>
+            <property name="title">
+                <string>Diagrammtyp</string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>Grundfrequenz</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>Intonation</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>RMS, Maximale Amplitude</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>Partials</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>Spectral Centroid</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>High Partials to Signal</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>Harmonic Slope</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>Local Maxima Rate</string>
+                        </property>
+                    </item>
+                    <property name="name">
+                        <cstring>COB_curve_selection</cstring>
+                    </property>
+                </widget>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>CB_hide_graph</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Blende dieses Diagramm aus</string>
+                    </property>
+                </widget>
+            </vbox>
+        </widget>
+        <widget class="QWidgetStack">
+            <property name="name">
+                <cstring>WS_control</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>5</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>P_basefreq</cstring>
+                </property>
+                <attribute name="id">
+                    <number>0</number>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>0</number>
+                    </property>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>groupBox1</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Optionen</string>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>CB_f0_show_reffreq</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Zeige Bezugston</string>
+                                </property>
+                                <property name="checked">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                        </vbox>
+                    </widget>
+                    <widget class="QButtonGroup">
+                        <property name="name">
+                            <cstring>BG_f0_freq_axis</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Frequenzachse</string>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QRadioButton">
+                                <property name="name">
+                                    <cstring>RB_f0_choose_freq</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Frequenzbereich</string>
+                                </property>
+                                <property name="checked">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            <widget class="QFrame">
+                                <property name="name">
+                                    <cstring>FR_f0_freq_controls</cstring>
+                                </property>
+                                <property name="frameShape">
+                                    <enum>NoFrame</enum>
+                                </property>
+                                <property name="frameShadow">
+                                    <enum>Raised</enum>
+                                </property>
+                                <vbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QLayoutWidget">
+                                        <property name="name">
+                                            <cstring>layout1</cstring>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel1</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Start:</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QSpinBox">
+                                                <property name="name">
+                                                    <cstring>SB_f0_start_freq</cstring>
+                                                </property>
+                                                <property name="maxValue">
+                                                    <number>19999</number>
+                                                </property>
+                                                <property name="lineStep">
+                                                    <number>10</number>
+                                                </property>
+                                            </widget>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel2</cstring>
+                                                </property>
+                                                <property name="sizePolicy">
+                                                    <sizepolicy>
+                                                        <hsizetype>7</hsizetype>
+                                                        <vsizetype>5</vsizetype>
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Hz</string>
+                                                </property>
+                                            </widget>
+                                        </hbox>
+                                    </widget>
+                                    <widget class="QSlider">
+                                        <property name="name">
+                                            <cstring>SL_f0_start_freq</cstring>
+                                        </property>
+                                        <property name="maxValue">
+                                            <number>19999</number>
+                                        </property>
+                                        <property name="lineStep">
+                                            <number>10</number>
+                                        </property>
+                                        <property name="pageStep">
+                                            <number>100</number>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLayoutWidget">
+                                        <property name="name">
+                                            <cstring>layout3</cstring>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel3</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Stop:</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QSpinBox">
+                                                <property name="name">
+                                                    <cstring>SB_f0_stop_freq</cstring>
+                                                </property>
+                                                <property name="maxValue">
+                                                    <number>20000</number>
+                                                </property>
+                                                <property name="minValue">
+                                                    <number>1</number>
+                                                </property>
+                                                <property name="lineStep">
+                                                    <number>10</number>
+                                                </property>
+                                                <property name="value">
+                                                    <number>20000</number>
+                                                </property>
+                                            </widget>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel4</cstring>
+                                                </property>
+                                                <property name="sizePolicy">
+                                                    <sizepolicy>
+                                                        <hsizetype>7</hsizetype>
+                                                        <vsizetype>5</vsizetype>
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Hz</string>
+                                                </property>
+                                            </widget>
+                                        </hbox>
+                                    </widget>
+                                    <widget class="QSlider">
+                                        <property name="name">
+                                            <cstring>SL_f0_stop_freq</cstring>
+                                        </property>
+                                        <property name="minValue">
+                                            <number>1</number>
+                                        </property>
+                                        <property name="maxValue">
+                                            <number>20000</number>
+                                        </property>
+                                        <property name="lineStep">
+                                            <number>10</number>
+                                        </property>
+                                        <property name="pageStep">
+                                            <number>100</number>
+                                        </property>
+                                        <property name="value">
+                                            <number>20000</number>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                    </widget>
+                                </vbox>
+                            </widget>
+                            <widget class="QRadioButton">
+                                <property name="name">
+                                    <cstring>RB_f0_choose_ref</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Bezugston</string>
+                                </property>
+                            </widget>
+                            <widget class="QFrame">
+                                <property name="name">
+                                    <cstring>FR_f0_ref_controls</cstring>
+                                </property>
+                                <property name="frameShape">
+                                    <enum>NoFrame</enum>
+                                </property>
+                                <property name="frameShadow">
+                                    <enum>Raised</enum>
+                                </property>
+                                <vbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QLayoutWidget">
+                                        <property name="name">
+                                            <cstring>layout4</cstring>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel5</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>ΔC:</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QSpinBox">
+                                                <property name="name">
+                                                    <cstring>SB_f0_delta_C</cstring>
+                                                </property>
+                                                <property name="maxValue">
+                                                    <number>200</number>
+                                                </property>
+                                                <property name="minValue">
+                                                    <number>10</number>
+                                                </property>
+                                                <property name="value">
+                                                    <number>100</number>
+                                                </property>
+                                            </widget>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel6</cstring>
+                                                </property>
+                                                <property name="sizePolicy">
+                                                    <sizepolicy>
+                                                        <hsizetype>7</hsizetype>
+                                                        <vsizetype>5</vsizetype>
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Cent</string>
+                                                </property>
+                                            </widget>
+                                        </hbox>
+                                    </widget>
+                                    <widget class="QSlider">
+                                        <property name="name">
+                                            <cstring>SL_f0_delta_C</cstring>
+                                        </property>
+                                        <property name="minValue">
+                                            <number>10</number>
+                                        </property>
+                                        <property name="maxValue">
+                                            <number>200</number>
+                                        </property>
+                                        <property name="value">
+                                            <number>100</number>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                    </widget>
+                                </vbox>
+                            </widget>
+                        </vbox>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer1</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>10</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>P_intonation</cstring>
+                </property>
+                <attribute name="id">
+                    <number>1</number>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>0</number>
+                    </property>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>groupBox8_2</cstring>
+                        </property>
+                        <property name="title">
+                            <string>y-Achse</string>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QSpinBox" row="0" column="1">
+                                <property name="name">
+                                    <cstring>SB_int_max</cstring>
+                                </property>
+                                <property name="maxValue">
+                                    <number>50</number>
+                                </property>
+                                <property name="minValue">
+                                    <number>10</number>
+                                </property>
+                                <property name="lineStep">
+                                    <number>10</number>
+                                </property>
+                                <property name="value">
+                                    <number>50</number>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>textLabel8_2_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Min:</string>
+                                </property>
+                            </widget>
+                            <widget class="QSpinBox" row="1" column="1">
+                                <property name="name">
+                                    <cstring>SB_int_min</cstring>
+                                </property>
+                                <property name="maxValue">
+                                    <number>-10</number>
+                                </property>
+                                <property name="minValue">
+                                    <number>-50</number>
+                                </property>
+                                <property name="lineStep">
+                                    <number>10</number>
+                                </property>
+                                <property name="value">
+                                    <number>-50</number>
+                                </property>
+                            </widget>
+                            <spacer row="1" column="3">
+                                <property name="name">
+                                    <cstring>spacer12_2</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <spacer row="0" column="3">
+                                <property name="name">
+                                    <cstring>spacer11_2</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>textLabel7_2_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Max:</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="2">
+                                <property name="name">
+                                    <cstring>textLabel7_2_2_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Cent</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="2">
+                                <property name="name">
+                                    <cstring>textLabel7_2_2_2_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Cent</string>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer12_3</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>P_minmax</cstring>
+                </property>
+                <attribute name="id">
+                    <number>2</number>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>0</number>
+                    </property>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>groupBox3</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Kurve</string>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>CB_enable_maxamp</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Max</string>
+                                </property>
+                                <property name="checked">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>CB_enable_rmsamp</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>RMS</string>
+                                </property>
+                                <property name="checked">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                        </vbox>
+                    </widget>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>groupBox4</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Amplitudenachse</string>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>textLabel7</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Max:</string>
+                                </property>
+                            </widget>
+                            <widget class="QSpinBox" row="0" column="1">
+                                <property name="name">
+                                    <cstring>SB_ampl_amp_max</cstring>
+                                </property>
+                                <property name="maxValue">
+                                    <number>0</number>
+                                </property>
+                                <property name="minValue">
+                                    <number>-90</number>
+                                </property>
+                                <property name="lineStep">
+                                    <number>10</number>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="2">
+                                <property name="name">
+                                    <cstring>textLabel9</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>7</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>dB</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>textLabel8</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Min:</string>
+                                </property>
+                            </widget>
+                            <widget class="QSpinBox" row="1" column="1">
+                                <property name="name">
+                                    <cstring>SB_ampl_amp_min</cstring>
+                                </property>
+                                <property name="maxValue">
+                                    <number>-10</number>
+                                </property>
+                                <property name="minValue">
+                                    <number>-100</number>
+                                </property>
+                                <property name="lineStep">
+                                    <number>10</number>
+                                </property>
+                                <property name="value">
+                                    <number>-100</number>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="2">
+                                <property name="name">
+                                    <cstring>textLabel10</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>7</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>dB</string>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer3</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>10</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>P_partials</cstring>
+                </property>
+                <attribute name="id">
+                    <number>3</number>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>0</number>
+                    </property>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>groupBox5</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Kurve</string>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>CB_enable_partial1</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Partial 1</string>
+                                </property>
+                                <property name="checked">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>CB_enable_partial2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Partial 2</string>
+                                </property>
+                                <property name="checked">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>CB_enable_partial3</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Partial 3</string>
+                                </property>
+                                <property name="checked">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                        </vbox>
+                    </widget>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>groupBox6</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Amplitudenachse</string>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>textLabel1_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Max:</string>
+                                </property>
+                            </widget>
+                            <widget class="QSpinBox" row="0" column="1">
+                                <property name="name">
+                                    <cstring>SB_partial_amp_max</cstring>
+                                </property>
+                                <property name="maxValue">
+                                    <number>0</number>
+                                </property>
+                                <property name="minValue">
+                                    <number>-90</number>
+                                </property>
+                                <property name="lineStep">
+                                    <number>10</number>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="2">
+                                <property name="name">
+                                    <cstring>textLabel3_2</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>7</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>dB</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>textLabel2_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Min:</string>
+                                </property>
+                            </widget>
+                            <widget class="QSpinBox" row="1" column="1">
+                                <property name="name">
+                                    <cstring>SB_partial_amp_min</cstring>
+                                </property>
+                                <property name="maxValue">
+                                    <number>-10</number>
+                                </property>
+                                <property name="minValue">
+                                    <number>-100</number>
+                                </property>
+                                <property name="lineStep">
+                                    <number>10</number>
+                                </property>
+                                <property name="value">
+                                    <number>-100</number>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="2">
+                                <property name="name">
+                                    <cstring>textLabel4_2</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>7</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>dB</string>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer5</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>5</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>P_spectralcentroid</cstring>
+                </property>
+                <attribute name="id">
+                    <number>4</number>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>0</number>
+                    </property>
+                    <widget class="QButtonGroup">
+                        <property name="name">
+                            <cstring>BG_f0_freq_axis_2</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Frequenzachse</string>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QFrame">
+                                <property name="name">
+                                    <cstring>FR_f0_freq_controls_2</cstring>
+                                </property>
+                                <property name="frameShape">
+                                    <enum>NoFrame</enum>
+                                </property>
+                                <property name="frameShadow">
+                                    <enum>Raised</enum>
+                                </property>
+                                <vbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QLayoutWidget">
+                                        <property name="name">
+                                            <cstring>layout1_2</cstring>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel1_3</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Start:</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QSpinBox">
+                                                <property name="name">
+                                                    <cstring>SB_spc_start_freq</cstring>
+                                                </property>
+                                                <property name="maxValue">
+                                                    <number>19999</number>
+                                                </property>
+                                                <property name="lineStep">
+                                                    <number>10</number>
+                                                </property>
+                                            </widget>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel2_3</cstring>
+                                                </property>
+                                                <property name="sizePolicy">
+                                                    <sizepolicy>
+                                                        <hsizetype>7</hsizetype>
+                                                        <vsizetype>5</vsizetype>
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Hz</string>
+                                                </property>
+                                            </widget>
+                                        </hbox>
+                                    </widget>
+                                    <widget class="QSlider">
+                                        <property name="name">
+                                            <cstring>SL_spc_start_freq</cstring>
+                                        </property>
+                                        <property name="maxValue">
+                                            <number>19999</number>
+                                        </property>
+                                        <property name="lineStep">
+                                            <number>10</number>
+                                        </property>
+                                        <property name="pageStep">
+                                            <number>100</number>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLayoutWidget">
+                                        <property name="name">
+                                            <cstring>layout3_2</cstring>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel3_3</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Stop:</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QSpinBox">
+                                                <property name="name">
+                                                    <cstring>SB_spc_stop_freq</cstring>
+                                                </property>
+                                                <property name="maxValue">
+                                                    <number>20000</number>
+                                                </property>
+                                                <property name="minValue">
+                                                    <number>1</number>
+                                                </property>
+                                                <property name="lineStep">
+                                                    <number>10</number>
+                                                </property>
+                                                <property name="value">
+                                                    <number>20000</number>
+                                                </property>
+                                            </widget>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel4_3</cstring>
+                                                </property>
+                                                <property name="sizePolicy">
+                                                    <sizepolicy>
+                                                        <hsizetype>7</hsizetype>
+                                                        <vsizetype>5</vsizetype>
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Hz</string>
+                                                </property>
+                                            </widget>
+                                        </hbox>
+                                    </widget>
+                                    <widget class="QSlider">
+                                        <property name="name">
+                                            <cstring>SL_spc_stop_freq</cstring>
+                                        </property>
+                                        <property name="minValue">
+                                            <number>1</number>
+                                        </property>
+                                        <property name="maxValue">
+                                            <number>20000</number>
+                                        </property>
+                                        <property name="lineStep">
+                                            <number>10</number>
+                                        </property>
+                                        <property name="pageStep">
+                                            <number>100</number>
+                                        </property>
+                                        <property name="value">
+                                            <number>20000</number>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                    </widget>
+                                </vbox>
+                            </widget>
+                        </vbox>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer4</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>P_hi2all</cstring>
+                </property>
+                <attribute name="id">
+                    <number>5</number>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>0</number>
+                    </property>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>groupBox9</cstring>
+                        </property>
+                        <property name="title">
+                            <string>y-Achse</string>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QSpinBox" row="0" column="1">
+                                <property name="name">
+                                    <cstring>SB_h2a_max</cstring>
+                                </property>
+                                <property name="maxValue">
+                                    <number>0</number>
+                                </property>
+                                <property name="minValue">
+                                    <number>-90</number>
+                                </property>
+                                <property name="lineStep">
+                                    <number>10</number>
+                                </property>
+                            </widget>
+                            <widget class="QSpinBox" row="1" column="1">
+                                <property name="name">
+                                    <cstring>SB_h2a_min</cstring>
+                                </property>
+                                <property name="maxValue">
+                                    <number>-10</number>
+                                </property>
+                                <property name="minValue">
+                                    <number>-100</number>
+                                </property>
+                                <property name="lineStep">
+                                    <number>10</number>
+                                </property>
+                                <property name="value">
+                                    <number>-100</number>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>textLabel10_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Min:</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="2">
+                                <property name="name">
+                                    <cstring>textLabel11</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>7</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>dB</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="2">
+                                <property name="name">
+                                    <cstring>textLabel12</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>7</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>dB</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>textLabel9_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Max:</string>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer6</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>5</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>P_harmonicslope</cstring>
+                </property>
+                <attribute name="id">
+                    <number>6</number>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>1</number>
+                    </property>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>groupBox8</cstring>
+                        </property>
+                        <property name="title">
+                            <string>y-Achse</string>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>textLabel7_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Max:</string>
+                                </property>
+                            </widget>
+                            <widget class="QSpinBox" row="0" column="1">
+                                <property name="name">
+                                    <cstring>SB_hsl_max</cstring>
+                                </property>
+                                <property name="maxValue">
+                                    <number>10</number>
+                                </property>
+                                <property name="minValue">
+                                    <number>-9</number>
+                                </property>
+                                <property name="value">
+                                    <number>5</number>
+                                </property>
+                            </widget>
+                            <spacer row="0" column="2">
+                                <property name="name">
+                                    <cstring>spacer11</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>5</width>
+                                        <height>16</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>textLabel8_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Min:</string>
+                                </property>
+                            </widget>
+                            <widget class="QSpinBox" row="1" column="1">
+                                <property name="name">
+                                    <cstring>SB_hsl_min</cstring>
+                                </property>
+                                <property name="maxValue">
+                                    <number>9</number>
+                                </property>
+                                <property name="minValue">
+                                    <number>-10</number>
+                                </property>
+                                <property name="value">
+                                    <number>-5</number>
+                                </property>
+                            </widget>
+                            <spacer row="1" column="2">
+                                <property name="name">
+                                    <cstring>spacer12</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>5</width>
+                                        <height>16</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </grid>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer8</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>5</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>P_localmaximarate</cstring>
+                </property>
+                <attribute name="id">
+                    <number>7</number>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>0</number>
+                    </property>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer3_2</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>5</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+        </widget>
+    </vbox>
+</widget>
+<connections>
+    <connection>
+        <sender>BG_f0_freq_axis</sender>
+        <signal>clicked(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>CB_enable_maxamp</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>CB_enable_rmsamp</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>CB_hide_graph</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>COB_curve_selection</sender>
+        <signal>activated(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>COB_curve_selection</sender>
+        <signal>activated(int)</signal>
+        <receiver>WS_control</receiver>
+        <slot>raiseWidget(int)</slot>
+    </connection>
+    <connection>
+        <sender>SB_ampl_amp_max</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>SB_ampl_amp_min</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>SB_f0_delta_C</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SL_f0_delta_C</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SB_f0_start_freq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SL_f0_start_freq</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SB_f0_stop_freq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SL_f0_stop_freq</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SL_f0_delta_C</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SB_f0_delta_C</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SB_f0_delta_C</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>SL_f0_start_freq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SB_f0_start_freq</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SB_f0_start_freq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>SB_f0_stop_freq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>SL_f0_stop_freq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SB_f0_stop_freq</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>CB_f0_show_reffreq</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>showRefTone()</slot>
+    </connection>
+    <connection>
+        <sender>CB_enable_partial1</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>CB_enable_partial2</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>CB_enable_partial3</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>SB_partial_amp_max</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>SB_partial_amp_min</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>SB_hsl_max</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>SB_hsl_min</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>SB_h2a_max</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>SB_h2a_min</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>SB_spc_start_freq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>SB_spc_stop_freq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>SB_spc_start_freq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SL_spc_start_freq</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SL_spc_start_freq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SB_spc_start_freq</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SB_spc_stop_freq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SL_spc_stop_freq</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SL_spc_stop_freq</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>SB_spc_stop_freq</receiver>
+        <slot>setValue(int)</slot>
+    </connection>
+    <connection>
+        <sender>SB_int_max</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+    <connection>
+        <sender>SB_int_min</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>FeatureControlBase</receiver>
+        <slot>updateGraph()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot access="protected" specifier="pure virtual">updateGraph()</slot>
+    <slot access="protected" specifier="pure virtual">showRefTone()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

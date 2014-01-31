@@ -1,0 +1,15 @@
+*              text=auto
+
+*.pro          text
+*.c*           text diff=cpp
+*.h*           text diff=cpp
+*.ui           text
+*.rc           text
+*.xml          text
+*.fnt          text
+*.txt          text
+*.md           text
+
+*.png          -text
+*.ico          -text
+
